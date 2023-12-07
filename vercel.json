@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/Index.js",
+        "use": "@now/node"
+      }
+    ],
+    "routes": [
+      { "src": "/Api/(.*)", "dest": "backend/Api.js" },
+      { "src": "/PaymentApi/(.*)", "dest": "backend/PaymentApi.js" },
+      { "src": "/(.*)", "dest": "backend/Index.js" }
+    ]
+  }
+  
